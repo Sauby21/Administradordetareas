@@ -43,11 +43,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Notification(text1: String, text2: String, modifier: Modifier = Modifier) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-            modifier = Modifier.padding(16.dp)
-        ) {
+
             Text(
                 text = text1,
                 fontWeight = FontWeight.Bold,
@@ -62,7 +58,6 @@ fun Notification(text1: String, text2: String, modifier: Modifier = Modifier) {
                 fontSize = 16.sp,
                 modifier = modifier
             )
-        }
 }
 @Composable
 fun NotificationImage(text1: String, text2: String, modifier: Modifier=Modifier){
@@ -73,13 +68,11 @@ fun NotificationImage(text1: String, text2: String, modifier: Modifier=Modifier)
     ){
         Column (
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center
+
         ){
             Image(
                 painter = image,
-                contentDescription = null,
-                modifier = Modifier
-                    .align(alignment = Alignment.CenterHorizontally)
+                contentDescription = null
             )
             Notification(text1, text2)
         }
